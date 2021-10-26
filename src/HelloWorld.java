@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
@@ -73,6 +76,31 @@ public class HelloWorld {
          System.out.println("2 - 10 = " + r); // -3
 
 //14.What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold? What happens if you increment a numeric variable past the type's capacity?
+
+        System.out.println("-----------------");
+
+//CONSOLE IO Curriculum
+
+//        String name = "codeup";
+//        System.out.printf("Hello there, %s. Nice to see you.\n", name);
+
+//In the example above, the %s will be replaced with the value of the name variable, resulting in an output of: Hello there, codeup. Nice to see you.
+
+        System.out.println("--------------------");
+
+        String greeting = "Salutations";
+        String name = "codeup";
+        System.out.printf("%s, %s!", greeting, name);
+        System.out.println("--------------------");
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter something: ");
+        String userInput = scanner.next();
+
+        System.out.println("You entered: --> \"" + userInput + "\" <--");
+
+
 
     }
 
