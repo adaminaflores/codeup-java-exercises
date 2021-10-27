@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
+    public static void main(String[] args) {
+        userCalculate();
+    }
     public static void userCalculate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Pick two numbers, please!");
@@ -14,19 +17,19 @@ public class MethodsExercises {
     }
         public static void calculate ( int num1, int num2, String input){
             switch (input) {
-                case "Addition":
+                case "add":
                     System.out.println("Add: " + (num1 + num2));
 
-                case "Subtraction":
+                case "subtract":
                     System.out.println("Subtract: " + (num1 - num2));
                     break;
-                case "Multiplication":
+                case "multiply":
                     System.out.println("Multiply: " + (num1 * num2));
                     break;
-                case "Division":
+                case "divide":
                     System.out.println("Divide: " + (num1 / num2));
                     break;
-                case "Modulus":
+                case "modulus":
                     System.out.println("Modulus: " + (num1 % num2));
                     break;
 
