@@ -40,23 +40,37 @@ public class ControlFlowExercises {
 //C. For
 //
 //Refactor the previous two exercises to use a for loop instead.
-        for(int i = 5; i <= 15; i++){
-            System.out.println(i);
-        }
-
-        for(int x = 2; x <= 100; x +=2){
-            System.out.println(x);
-        }
-
-        for(int y = 100; y >= -10; y -= 5){
-            System.out.println(y);
-        }
+//        for(int i = 5; i <= 15; i++){
+//            System.out.println(i);
+//        }
+//
+//        for(int x = 2; x <= 100; x +=2){
+//            System.out.println(x);
+//        }
+//
+//        for(int y = 100; y >= -10; y -= 5){
+//            System.out.println(y);
+//        }
 
 //        for(int z = 2; z <= 1000000; z *= z){
 //            System.out.println(z);
 //        }
 
 // 2. FizzBuzz
+        for(int i = 1; i <= 100; i++){
+            if((i % 3 == 0) && (i % 5 == 0)){
+                System.out.println("FizzBuzz");
+            }else if(i % 3 == 0){
+                System.out.println("Fizz");
+            }else if(i % 5 == 0){
+                System.out.println("Buzz");
+            }else {
+                System.out.println(i);
+            }
+
+        }
+
+
 
 
 
