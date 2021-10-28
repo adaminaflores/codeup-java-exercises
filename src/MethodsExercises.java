@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
-        userCalculate();
+//        userCalculate();
+        System.out.println("Enter a number between 1 and 10: ");
+        int userInput = getInteger(1, 10);
     }
     public static void userCalculate() {
         Scanner scanner = new Scanner(System.in);
@@ -35,5 +37,16 @@ public class MethodsExercises {
 
             }
 
+
         }
+    public static int getInteger(int min, int max){
+       Scanner scanner = new Scanner(System.in);
+       int userInput = scanner.nextInt();
+       if(userInput <= max && userInput >= min) {
+           return userInput;
+       }else{
+           System.out.printf("Enter a number between %d - %d: \n", min, max);
+           return getInteger(min, max);
+       }
+    }
     }
