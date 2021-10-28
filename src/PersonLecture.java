@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Person {
+public class PersonLecture {
 
     //instance variables
 
@@ -18,7 +18,7 @@ public class Person {
     public static long worldPop = 7_900_000_000L;
 
     public static void main(String[] args) {
-        Person addie = new Person();
+        PersonLecture addie = new PersonLecture();
 
         addie.firstname = "Addie";
         addie.lastname = "Flores";
@@ -32,11 +32,11 @@ public class Person {
 
 //let's add doug to worldPop:
 
-        Person douglas = new Person();
+        PersonLecture douglas = new PersonLecture();
         douglas.firstname = "Douglas";
         douglas.lastname = "Hirsh";
 
-        Person.worldPop += 1;
+        PersonLecture.worldPop += 1;
         System.out.println("worldPop with Doug: = "+ worldPop) ;
 
 
