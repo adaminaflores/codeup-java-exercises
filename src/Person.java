@@ -1,8 +1,12 @@
 public class Person {
     private String name;
+    protected int age;
+
+    public Person(){};
 
     public Person(String name){
             this.name = name;
+
     }
 
 
@@ -12,9 +16,10 @@ public class Person {
 
     }
 
-    public void setName(String name){
+    public void setName(String name, int age){
 //TODO: change the name property to the passed value
         this.name = name;
+        this.age = age;
 
 
 
@@ -46,9 +51,9 @@ public class Person {
         System.out.println(person2.getName());
         //John //John comes out
 
-        person2.setName("Jane");
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
+//        person2.setName("Jane");
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
         //Jane //Jane comes out
     }
 
