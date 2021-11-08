@@ -3,6 +3,7 @@ package grades;
 import java.util.ArrayList;
 
 public class Student {
+    public double getGradeAverage;
     private String name;
     private ArrayList<Integer> grades;
 
