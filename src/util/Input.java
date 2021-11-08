@@ -29,7 +29,16 @@ public class Input {
         return yesNo();
     }
     public int getInt(){
-        return this.scanner.nextInt();
+        try {
+            String userInput = getString();
+            return Integer.parseInt(userInput);
+        } catch(Exception e){
+            System.out.println("Sorry! You need to enter a number");
+            e.printStackTrace();
+            e.getMessage();
+
+            return getInt();
+        }
 
     }
 
@@ -77,8 +86,15 @@ public class Input {
     }
 
     public double getDouble(){
-        return this.scanner.nextDouble();
-
+        try{
+        String userInput = getString();
+        return Integer.parseInt(userInput);
+        } catch (Exception e){
+            System.out.println("Sorry! You need to enter a number");
+            e.printStackTrace();
+            e.getMessage();
+            return getDouble();
+        }
     }
     public double getDouble(String prompt){
         System.out.println(prompt);
