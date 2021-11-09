@@ -11,7 +11,7 @@ public class Input {
     }
 
     public String getString(){
-        System.out.println("Enter a string.");
+        System.out.println();
         return this.scanner.nextLine();
 
     }
@@ -30,21 +30,24 @@ public class Input {
     }
     public int getInt(){
         try {
-            String userInput = getString();
-            return Integer.parseInt(userInput);
-        } catch(Exception e){
-            System.out.println("Sorry! You need to enter a number");
-            e.printStackTrace();
-            e.getMessage();
-
+            String s = getString();
+            return Integer.valueOf(s);
+        } catch(NumberFormatException nfe){
+            System.out.println("Enter an Integer: ");
             return getInt();
         }
 
     }
 
     public int getInt(String prompt){
-        System.out.println(prompt);
-        return getInt();
+        int number;
+        try{
+            number = Integer.valueOf(getString(prompt));
+            return number;
+        }catch(NumberFormatException nfe) {
+            System.out.println("Try again!");
+            return getInt(prompt);
+        }
     }
 
     public int getInt(int min, int max){
@@ -87,18 +90,22 @@ public class Input {
 
     public double getDouble(){
         try{
-        String userInput = getString();
-        return Integer.parseInt(userInput);
-        } catch (Exception e){
-            System.out.println("Sorry! You need to enter a number");
-            e.printStackTrace();
-            e.getMessage();
+        String s = getString();
+        return Double.valueOf(s);
+        } catch (NumberFormatException nfe){
+            System.out.println("Enter a number: ");
             return getDouble();
         }
     }
     public double getDouble(String prompt){
-        System.out.println(prompt);
-        return getDouble();
+        double number;
+        try {
+            number = Double.valueOf(getString(prompt));
+            return number;
+        }catch (NumberFormatException nfe){
+            System.out.println("Try Again");
+            return getDouble(prompt);
+        }
     }
 
 }
